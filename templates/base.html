@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "snippets/styles.html" %}
+
+    {% comment %} Template Inheritance {% endcomment %}
+    {% block app_css %}
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    {% endblock app_css %}
+    {% comment %} Template Inheritance {% endcomment %}
+
+    <title>{{title}}</title>
+</head>
+<body>
+  {% include "snippets/navbar.html" %}
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-white text-center">
+          {% comment %} Template Inheritance {% endcomment %}
+          {% block header %}{% endblock header %}
+          {% comment %} Template Inheritance {% endcomment %}
+      </div>
+    </div>
+
+    <div class='container-fluid'>
+      <div class="container bg-white text-dark shadow" id='myBody'>
+        {% block content1 %}{% endblock content1 %}
+      </div>
+      <div class="container bg-dark text-dark shadow">
+        {% comment %} Template Inheritance {% endcomment %}
+        {% block content2 %}{% endblock content2 %}
+        {% comment %} Template Inheritance {% endcomment %}
+      </div>
+    </div>
+    {% include "snippets/scripts.html" %}
+</body>
+</html>

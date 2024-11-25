@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block app_css %}
+      <link rel="stylesheet" href="{% static "blog/css/styles.css" %}">
+{% endblock app_css %}
+
+{% block header %}
+    <h1 class="display-4">{{heading}}</h1>
+    <p class="lead">{{subheading}}</p>
+{% endblock header %}

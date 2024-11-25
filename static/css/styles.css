@@ -1,0 +1,18 @@
+#navLogo{
+    height: 30px;
+}
+
+.jumbotron{
+    background-image: url("/static/img/mainHeader.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.container-fluid .container .row{
+    height: 400px;
+}
+
+.container-fluid .container{
+    margin-top: -100px;
+}
